@@ -5,17 +5,30 @@ const HeroSection = () => {
     <section className="relative py-16 md:py-24 lg:py-32">
       <div className="container">
         <div className="max-w-3xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 animate-fade-in">
-            The Future of Hookah Is{" "}
-            <span className="text-gradient-gold">Charcoal-Free</span>
-          </h1>
-          
-          <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto animate-fade-in opacity-0" style={{ animationDelay: "0.2s" }}>
-            NOCCA is the world's first fully electronic heat management system for shisha. 
-            Premium sessions, zero hassle, perfect temperature control every time.
+          <p className="text-muted-foreground text-lg mb-6 animate-fade-in">
+            For years, hookah lovers kept burning tobacco and hoping the coals behave.
           </p>
           
-          <div className="animate-fade-in opacity-0" style={{ animationDelay: "0.4s" }}>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 animate-fade-in opacity-0" style={{ animationDelay: "0.1s" }}>
+            Now there's{" "}
+            <span className="text-gradient-gold">NOCCA</span>
+          </h1>
+          
+          <p className="text-xl md:text-2xl text-foreground font-medium mb-6 animate-fade-in opacity-0" style={{ animationDelay: "0.2s" }}>
+            The smart, clean, modern way to keep the ritual alive.
+          </p>
+          
+          <div className="space-y-2 text-lg text-muted-foreground mb-8 animate-fade-in opacity-0" style={{ animationDelay: "0.3s" }}>
+            <p>Premium shisha at home</p>
+            <p>Same tradition — no charcoal, zero hassle</p>
+            <p>No ash. No smell. No burnt flavor.</p>
+          </div>
+          
+          <p className="text-foreground/80 italic mb-8 animate-fade-in opacity-0" style={{ animationDelay: "0.4s" }}>
+            Once you try it, going back to coals feels… ancient.
+          </p>
+          
+          <div className="animate-fade-in opacity-0" style={{ animationDelay: "0.5s" }}>
             <Button variant="gold" size="xl" className="animate-pulse-gold">
               Get €100 Off Now
             </Button>
@@ -23,7 +36,6 @@ const HeroSection = () => {
         </div>
       </div>
       
-      {/* Subtle gradient overlay */}
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-charcoal-light/50 to-transparent pointer-events-none" />
     </section>
   );
