@@ -3,9 +3,10 @@ interface ReasonCardProps {
   title: string;
   description: string;
   bullets: string[];
+  additionalText?: string;
 }
 
-const ReasonCard = ({ number, title, description, bullets }: ReasonCardProps) => {
+const ReasonCard = ({ number, title, description, bullets, additionalText }: ReasonCardProps) => {
   return (
     <div className="py-16 md:py-20 border-b border-border last:border-b-0">
       <div className="container">
@@ -26,14 +27,22 @@ const ReasonCard = ({ number, title, description, bullets }: ReasonCardProps) =>
               {description}
             </p>
             
-            <ul className="space-y-3">
-              {bullets.map((bullet, index) => (
-                <li key={index} className="flex items-start gap-3">
-                  <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2.5 flex-shrink-0" />
-                  <span className="text-foreground/80">{bullet}</span>
-                </li>
-              ))}
-            </ul>
+            {bullets.length > 0 && (
+              <ul className="space-y-3 mb-6">
+                {bullets.map((bullet, index) => (
+                  <li key={index} className="flex items-start gap-3">
+                    <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2.5 flex-shrink-0" />
+                    <span className="text-foreground/80">{bullet}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
+            
+            {additionalText && (
+              <p className="text-foreground/70 whitespace-pre-line">
+                {additionalText}
+              </p>
+            )}
           </div>
           
           {/* Image Placeholder */}
