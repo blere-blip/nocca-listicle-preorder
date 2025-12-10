@@ -14,7 +14,7 @@ const ReasonCard = ({ number, title, description, bullets, additionalText }: Rea
           {/* Content */}
           <div className={`order-2 ${number % 2 === 0 ? "lg:order-1" : "lg:order-2"}`}>
             <div className="flex items-center gap-4 mb-6">
-              <span className="text-6xl md:text-7xl font-cormorant font-bold text-primary/15">
+              <span className="text-6xl md:text-7xl font-playfair font-bold text-primary/15">
                 {number.toString().padStart(2, "0")}
               </span>
             </div>
@@ -48,7 +48,7 @@ const ReasonCard = ({ number, title, description, bullets, additionalText }: Rea
           {/* Image Placeholder */}
           <div className={`order-1 ${number % 2 === 0 ? "lg:order-2" : "lg:order-1"}`}>
             <div className="aspect-[4/3] rounded-2xl bg-gradient-to-br from-secondary to-background border border-border/30 flex items-center justify-center backdrop-blur-sm">
-              <span className="text-muted-foreground/50 text-lg font-sora">Add image here</span>
+              <span className="text-muted-foreground/50 text-lg">Add image here</span>
             </div>
           </div>
         </div>
