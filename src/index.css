@@ -2,61 +2,62 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
-
 @layer base {
   :root {
-    --background: 0 0% 5%;
-    --foreground: 0 0% 95%;
+    --background: 0 0% 2%;
+    --foreground: 0 0% 92%;
 
-    --card: 0 0% 8%;
-    --card-foreground: 0 0% 95%;
+    --card: 0 0% 5%;
+    --card-foreground: 0 0% 92%;
 
-    --popover: 0 0% 8%;
-    --popover-foreground: 0 0% 95%;
+    --popover: 0 0% 5%;
+    --popover-foreground: 0 0% 92%;
 
-    --primary: 45 71% 47%;
-    --primary-foreground: 0 0% 5%;
+    --primary: 32 85% 55%;
+    --primary-foreground: 0 0% 2%;
 
-    --secondary: 0 0% 12%;
-    --secondary-foreground: 0 0% 95%;
+    --secondary: 0 0% 8%;
+    --secondary-foreground: 0 0% 92%;
 
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 60%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 55%;
 
-    --accent: 45 71% 47%;
-    --accent-foreground: 0 0% 5%;
+    --accent: 32 85% 55%;
+    --accent-foreground: 0 0% 2%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 0 0% 18%;
-    --input: 0 0% 18%;
-    --ring: 45 71% 47%;
+    --border: 0 0% 14%;
+    --input: 0 0% 14%;
+    --ring: 32 85% 55%;
 
     --radius: 0.5rem;
 
-    /* Custom colors */
-    --gold: 45 71% 47%;
-    --gold-light: 45 71% 60%;
-    --gold-dark: 45 71% 35%;
-    --charcoal: 0 0% 8%;
-    --charcoal-light: 0 0% 12%;
-    --metallic: 0 0% 25%;
+    /* Custom colors - warm copper/amber tones */
+    --copper: 32 85% 55%;
+    --copper-light: 32 80% 65%;
+    --copper-dark: 32 90% 40%;
+    --ember: 15 90% 50%;
+    --smoke: 0 0% 20%;
+    --smoke-light: 0 0% 35%;
+    --deep-black: 0 0% 2%;
 
     /* Gradients */
-    --gradient-gold: linear-gradient(135deg, hsl(45, 71%, 47%), hsl(45, 71%, 60%));
-    --gradient-dark: linear-gradient(180deg, hsl(0, 0%, 8%), hsl(0, 0%, 5%));
-    --gradient-metallic: linear-gradient(135deg, hsl(0, 0%, 15%), hsl(0, 0%, 8%));
+    --gradient-copper: linear-gradient(135deg, hsl(32, 85%, 55%), hsl(32, 80%, 65%));
+    --gradient-ember: linear-gradient(135deg, hsl(32, 85%, 55%), hsl(15, 90%, 50%));
+    --gradient-dark: linear-gradient(180deg, hsl(0, 0%, 5%), hsl(0, 0%, 2%));
+    --gradient-smoke: linear-gradient(180deg, transparent, hsl(0, 0%, 2%));
 
     /* Shadows */
-    --shadow-gold: 0 4px 30px hsl(45 71% 47% / 0.2);
-    --shadow-lg: 0 25px 50px -12px hsl(0 0% 0% / 0.5);
+    --shadow-copper: 0 4px 40px hsl(32 85% 55% / 0.25);
+    --shadow-lg: 0 25px 50px -12px hsl(0 0% 0% / 0.7);
+    --shadow-glow: 0 0 60px hsl(32 85% 55% / 0.15);
   }
 
   .dark {
-    --background: 0 0% 5%;
-    --foreground: 0 0% 95%;
+    --background: 0 0% 2%;
+    --foreground: 0 0% 92%;
   }
 }
 
@@ -70,41 +71,127 @@
   }
 
   body {
-    @apply bg-background text-foreground font-outfit antialiased;
+    @apply bg-background text-foreground font-sora antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-cormorant font-semibold tracking-tight;
   }
 }
 
 @layer components {
-  .gradient-gold {
-    background: var(--gradient-gold);
+  .gradient-copper {
+    background: var(--gradient-copper);
+  }
+
+  .gradient-ember {
+    background: var(--gradient-ember);
   }
 
   .gradient-dark {
     background: var(--gradient-dark);
   }
 
-  .gradient-metallic {
-    background: var(--gradient-metallic);
-  }
-
   .text-gradient-gold {
-    background: var(--gradient-gold);
+    background: var(--gradient-copper);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
-  .shadow-gold {
-    box-shadow: var(--shadow-gold);
+  .shadow-copper {
+    box-shadow: var(--shadow-copper);
   }
 
-  .glow-gold {
-    box-shadow: 0 0 40px hsl(45 71% 47% / 0.3);
+  .glow-copper {
+    box-shadow: 0 0 60px hsl(32 85% 55% / 0.2);
+  }
+
+  /* Smoke effect layers */
+  .smoke-layer {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+  }
+
+  .smoke-particle {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0;
+    animation: smoke-rise 20s ease-in-out infinite;
+  }
+
+  .smoke-particle:nth-child(1) {
+    width: 400px;
+    height: 400px;
+    left: 10%;
+    bottom: -200px;
+    background: radial-gradient(circle, hsl(0, 0%, 25%) 0%, transparent 70%);
+    animation-delay: 0s;
+  }
+
+  .smoke-particle:nth-child(2) {
+    width: 500px;
+    height: 500px;
+    left: 30%;
+    bottom: -250px;
+    background: radial-gradient(circle, hsl(0, 0%, 20%) 0%, transparent 70%);
+    animation-delay: 4s;
+  }
+
+  .smoke-particle:nth-child(3) {
+    width: 350px;
+    height: 350px;
+    left: 60%;
+    bottom: -175px;
+    background: radial-gradient(circle, hsl(0, 0%, 22%) 0%, transparent 70%);
+    animation-delay: 8s;
+  }
+
+  .smoke-particle:nth-child(4) {
+    width: 450px;
+    height: 450px;
+    left: 80%;
+    bottom: -225px;
+    background: radial-gradient(circle, hsl(0, 0%, 18%) 0%, transparent 70%);
+    animation-delay: 12s;
+  }
+
+  .smoke-particle:nth-child(5) {
+    width: 380px;
+    height: 380px;
+    left: 45%;
+    bottom: -190px;
+    background: radial-gradient(circle, hsl(32, 20%, 15%) 0%, transparent 70%);
+    animation-delay: 16s;
   }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+@keyframes smoke-rise {
+  0% {
+    transform: translateY(0) scale(1) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-120vh) scale(1.5) rotate(45deg);
+    opacity: 0;
   }
 }

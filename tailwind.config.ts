@@ -14,7 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        outfit: ["Outfit", "sans-serif"],
+        cormorant: ["Cormorant Garamond", "serif"],
+        sora: ["Sora", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -50,16 +51,16 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        gold: {
-          DEFAULT: "hsl(var(--gold))",
-          light: "hsl(var(--gold-light))",
-          dark: "hsl(var(--gold-dark))",
+        copper: {
+          DEFAULT: "hsl(var(--copper))",
+          light: "hsl(var(--copper-light))",
+          dark: "hsl(var(--copper-dark))",
         },
-        charcoal: {
-          DEFAULT: "hsl(var(--charcoal))",
-          light: "hsl(var(--charcoal-light))",
+        ember: "hsl(var(--ember))",
+        smoke: {
+          DEFAULT: "hsl(var(--smoke))",
+          light: "hsl(var(--smoke-light))",
         },
-        metallic: "hsl(var(--metallic))",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -83,13 +84,17 @@ export default {
           "0%": { opacity: "0", transform: "translateY(30px)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
         },
-        "pulse-gold": {
-          "0%, 100%": { boxShadow: "0 0 20px hsl(45 71% 47% / 0.3)" },
-          "50%": { boxShadow: "0 0 40px hsl(45 71% 47% / 0.5)" },
+        "pulse-copper": {
+          "0%, 100%": { boxShadow: "0 0 20px hsl(32 85% 55% / 0.3)" },
+          "50%": { boxShadow: "0 0 50px hsl(32 85% 55% / 0.5)" },
         },
         shimmer: {
           "0%": { backgroundPosition: "-200% 0" },
           "100%": { backgroundPosition: "200% 0" },
+        },
+        float: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-10px)" },
         },
       },
       animation: {
@@ -97,8 +102,9 @@ export default {
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-in": "fade-in 0.6s ease-out forwards",
         "fade-in-up": "fade-in-up 0.8s ease-out forwards",
-        "pulse-gold": "pulse-gold 2s ease-in-out infinite",
+        "pulse-gold": "pulse-copper 2.5s ease-in-out infinite",
         shimmer: "shimmer 2s linear infinite",
+        float: "float 6s ease-in-out infinite",
       },
     },
   },
