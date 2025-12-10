@@ -5,7 +5,7 @@ const Footer = () => {
     <footer className="py-8 border-t border-border">
       <div className="container">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          <img src={noccaLogo} alt="NOCCA" className="h-8" />
+          <img src={noccaLogo} alt="NOCCA" className="h-10" />
           <p className="text-sm text-muted-foreground text-center">
             © {new Date().getFullYear()} NOCCA. All rights reserved.
           </p>
