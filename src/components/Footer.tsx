@@ -1,18 +1,18 @@
 const Footer = () => {
   return (
-    <footer className="py-8 border-t border-border">
+    <footer className="py-12 border-t border-border/30">
       <div className="container">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-2xl font-bold text-gradient-gold">NOCCA</p>
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+          <p className="text-3xl font-cormorant font-semibold text-gradient-gold">NOCCA</p>
           
-          <p className="text-sm text-muted-foreground text-center">
+          <p className="text-sm text-muted-foreground/70 text-center font-light">
             © {new Date().getFullYear()} NOCCA. All rights reserved.
           </p>
           
-          <div className="flex items-center gap-6 text-sm text-muted-foreground">
-            <a href="#" className="hover:text-foreground transition-colors">Privacy</a>
-            <a href="#" className="hover:text-foreground transition-colors">Terms</a>
-            <a href="#" className="hover:text-foreground transition-colors">Contact</a>
+          <div className="flex items-center gap-8 text-sm text-muted-foreground/70">
+            <a href="#" className="hover:text-foreground transition-colors font-light">Privacy</a>
+            <a href="#" className="hover:text-foreground transition-colors font-light">Terms</a>
+            <a href="#" className="hover:text-foreground transition-colors font-light">Contact</a>
           </div>
         </div>
       </div>

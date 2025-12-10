@@ -86,11 +86,11 @@ const reasons = [
 
 const ReasonsSection = () => {
   return (
-    <section className="py-16 md:py-20">
-      <div className="container mb-12">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center">
+    <section className="py-20 md:py-28">
+      <div className="container mb-16">
+        <h2 className="text-4xl md:text-5xl lg:text-6xl text-center leading-tight">
           8 Reasons Hookah Lovers Are{" "}
-          <span className="text-gradient-gold">Switching to NOCCA</span>
+          <span className="text-gradient-gold block mt-2">Switching to NOCCA</span>
         </h2>
       </div>
       
