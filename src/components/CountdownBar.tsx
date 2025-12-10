@@ -2,33 +2,33 @@ import { Truck, Shield, RotateCcw } from "lucide-react";
 
 const CountdownBar = () => {
   return (
-    <section className="py-10 border-y border-border/30">
+    <section className="py-8 border-y border-border">
       <div className="container">
         {/* Countdown */}
-        <div className="text-center mb-10">
-          <p className="text-sm text-muted-foreground uppercase tracking-[0.3em] mb-4 font-light">
+        <div className="text-center mb-8">
+          <p className="text-sm text-muted-foreground uppercase tracking-widest mb-2">
             Deal Ends In
           </p>
-          <p className="text-4xl md:text-5xl font-playfair font-semibold text-primary tracking-wider">
+          <p className="text-3xl md:text-4xl font-bold text-primary tracking-wider">
             00 : 00 : 00
           </p>
         </div>
         
         {/* Badges */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto">
-          <div className="flex items-center justify-center gap-4 text-center">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
+          <div className="flex items-center justify-center gap-3 text-center">
             <Truck className="w-6 h-6 text-primary" />
-            <span className="text-sm md:text-base font-light">Free Worldwide Shipping</span>
+            <span className="text-sm md:text-base font-medium">Free Worldwide Shipping</span>
           </div>
           
-          <div className="flex items-center justify-center gap-4 text-center">
+          <div className="flex items-center justify-center gap-3 text-center">
             <Shield className="w-6 h-6 text-primary" />
-            <span className="text-sm md:text-base font-light">24-Month Warranty</span>
+            <span className="text-sm md:text-base font-medium">24-Month Warranty</span>
           </div>
           
-          <div className="flex items-center justify-center gap-4 text-center">
+          <div className="flex items-center justify-center gap-3 text-center">
             <RotateCcw className="w-6 h-6 text-primary" />
-            <span className="text-sm md:text-base font-light">14-Day Returns</span>
+            <span className="text-sm md:text-base font-medium">14-Day Returns</span>
           </div>
         </div>
       </div>
