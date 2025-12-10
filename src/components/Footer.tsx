@@ -10,9 +10,9 @@ const Footer = () => {
           </p>
           
           <div className="flex items-center gap-6 text-sm text-muted-foreground">
-            <a href="#" className="hover:text-foreground transition-colors">Privacy</a>
-            <a href="#" className="hover:text-foreground transition-colors">Terms</a>
-            <a href="#" className="hover:text-foreground transition-colors">Contact</a>
+            <a href="https://www.nocca-ehms.com/privacy-policy" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">Privacy</a>
+            <a href="https://www.nocca-ehms.com/terms-and-conditions" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">Terms</a>
+            <a href="https://www.nocca-ehms.com/shipping-policy" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">Shipping</a>
           </div>
         </div>
       </div>
