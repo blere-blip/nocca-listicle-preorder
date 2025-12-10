@@ -9,7 +9,7 @@ const CountdownBar = () => {
           <p className="text-sm text-muted-foreground uppercase tracking-[0.3em] mb-4 font-light">
             Deal Ends In
           </p>
-          <p className="text-4xl md:text-5xl font-cormorant font-semibold text-primary tracking-wider">
+          <p className="text-4xl md:text-5xl font-playfair font-semibold text-primary tracking-wider">
             00 : 00 : 00
           </p>
         </div>

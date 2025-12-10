@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        cormorant: ["Cormorant Garamond", "serif"],
-        sora: ["Sora", "sans-serif"],
+        playfair: ["Playfair Display", "serif"],
+        sans: ["DM Sans", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -51,10 +51,11 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        copper: {
-          DEFAULT: "hsl(var(--copper))",
-          light: "hsl(var(--copper-light))",
-          dark: "hsl(var(--copper-dark))",
+        gold: {
+          DEFAULT: "hsl(var(--gold))",
+          light: "hsl(var(--gold-light))",
+          dark: "hsl(var(--gold-dark))",
+          shine: "hsl(var(--gold-shine))",
         },
         ember: "hsl(var(--ember))",
         smoke: {
@@ -84,9 +85,9 @@ export default {
           "0%": { opacity: "0", transform: "translateY(30px)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
         },
-        "pulse-copper": {
-          "0%, 100%": { boxShadow: "0 0 20px hsl(32 85% 55% / 0.3)" },
-          "50%": { boxShadow: "0 0 50px hsl(32 85% 55% / 0.5)" },
+        "pulse-gold": {
+          "0%, 100%": { boxShadow: "0 0 30px hsl(43 96% 56% / 0.35)" },
+          "50%": { boxShadow: "0 0 60px hsl(43 96% 56% / 0.55)" },
         },
         shimmer: {
           "0%": { backgroundPosition: "-200% 0" },

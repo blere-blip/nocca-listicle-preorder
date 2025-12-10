@@ -5,54 +5,56 @@
 @layer base {
   :root {
     --background: 0 0% 2%;
-    --foreground: 0 0% 92%;
+    --foreground: 45 20% 95%;
 
     --card: 0 0% 5%;
-    --card-foreground: 0 0% 92%;
+    --card-foreground: 45 20% 95%;
 
     --popover: 0 0% 5%;
-    --popover-foreground: 0 0% 92%;
+    --popover-foreground: 45 20% 95%;
 
-    --primary: 32 85% 55%;
+    /* Premium 24K Gold */
+    --primary: 43 96% 56%;
     --primary-foreground: 0 0% 2%;
 
     --secondary: 0 0% 8%;
-    --secondary-foreground: 0 0% 92%;
+    --secondary-foreground: 45 20% 95%;
 
     --muted: 0 0% 12%;
-    --muted-foreground: 0 0% 55%;
+    --muted-foreground: 40 10% 55%;
 
-    --accent: 32 85% 55%;
+    --accent: 43 96% 56%;
     --accent-foreground: 0 0% 2%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 0 0% 14%;
-    --input: 0 0% 14%;
-    --ring: 32 85% 55%;
+    --border: 40 15% 12%;
+    --input: 40 15% 12%;
+    --ring: 43 96% 56%;
 
     --radius: 0.5rem;
 
-    /* Custom colors - warm copper/amber tones */
-    --copper: 32 85% 55%;
-    --copper-light: 32 80% 65%;
-    --copper-dark: 32 90% 40%;
-    --ember: 15 90% 50%;
+    /* Premium 24K Gold palette */
+    --gold: 43 96% 56%;
+    --gold-light: 45 100% 70%;
+    --gold-dark: 40 90% 45%;
+    --gold-shine: 48 100% 75%;
+    --ember: 25 95% 50%;
     --smoke: 0 0% 20%;
     --smoke-light: 0 0% 35%;
     --deep-black: 0 0% 2%;
 
-    /* Gradients */
-    --gradient-copper: linear-gradient(135deg, hsl(32, 85%, 55%), hsl(32, 80%, 65%));
-    --gradient-ember: linear-gradient(135deg, hsl(32, 85%, 55%), hsl(15, 90%, 50%));
+    /* Premium Gradients */
+    --gradient-gold: linear-gradient(135deg, hsl(40, 90%, 45%) 0%, hsl(43, 96%, 56%) 30%, hsl(48, 100%, 70%) 50%, hsl(43, 96%, 56%) 70%, hsl(40, 90%, 45%) 100%);
+    --gradient-gold-subtle: linear-gradient(135deg, hsl(43, 96%, 56%), hsl(45, 100%, 65%));
     --gradient-dark: linear-gradient(180deg, hsl(0, 0%, 5%), hsl(0, 0%, 2%));
     --gradient-smoke: linear-gradient(180deg, transparent, hsl(0, 0%, 2%));
 
     /* Shadows */
-    --shadow-copper: 0 4px 40px hsl(32 85% 55% / 0.25);
+    --shadow-gold: 0 4px 40px hsl(43 96% 56% / 0.3);
     --shadow-lg: 0 25px 50px -12px hsl(0 0% 0% / 0.7);
-    --shadow-glow: 0 0 60px hsl(32 85% 55% / 0.15);
+    --shadow-glow: 0 0 80px hsl(43 96% 56% / 0.2);
   }
 
   .dark {
@@ -71,21 +73,21 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sora antialiased;
+    @apply bg-background text-foreground font-sans antialiased;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-cormorant font-semibold tracking-tight;
+    @apply font-playfair font-semibold tracking-tight;
   }
 }
 
 @layer components {
-  .gradient-copper {
-    background: var(--gradient-copper);
+  .gradient-gold {
+    background: var(--gradient-gold);
   }
 
-  .gradient-ember {
-    background: var(--gradient-ember);
+  .gradient-gold-subtle {
+    background: var(--gradient-gold-subtle);
   }
 
   .gradient-dark {
@@ -93,18 +95,18 @@
   }
 
   .text-gradient-gold {
-    background: var(--gradient-copper);
+    background: var(--gradient-gold);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
-  .shadow-copper {
-    box-shadow: var(--shadow-copper);
+  .shadow-gold {
+    box-shadow: var(--shadow-gold);
   }
 
-  .glow-copper {
-    box-shadow: 0 0 60px hsl(32 85% 55% / 0.2);
+  .glow-gold {
+    box-shadow: 0 0 80px hsl(43 96% 56% / 0.25);
   }
 
   /* Smoke effect layers */
