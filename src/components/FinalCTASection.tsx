@@ -6,26 +6,21 @@ const FinalCTASection = () => {
     <section className="py-20 md:py-28 bg-gradient-to-b from-charcoal-light to-background">
       <div className="container">
         <div className="max-w-3xl mx-auto text-center">
-          <p className="text-primary font-semibold text-lg mb-4">
-            SAVE €100 BEFORE PRE-ORDERS CLOSE ON 20.12
-          </p>
-          
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-            First Batch —{" "}
-            <span className="text-gradient-gold">Best Price Ever</span>
+            Save €100 Before Pre-Orders Close on{" "}
+            <span className="text-gradient-gold">20.12</span>
           </h2>
           
           <p className="text-lg text-muted-foreground mb-8">
-            This batch is almost full.<br />
-            Once it closes, the €100 discount disappears.
+            Batch #1 is nearly allocated. Once it closes, pricing returns to the standard launch price.
           </p>
           
           <Button variant="gold" size="xl" className="animate-pulse-gold mb-6">
-            Get €100 Off Now
+            Get €100 Off — Secure Your Batch #1 Unit
           </Button>
           
           <p className="text-sm text-muted-foreground mb-8">
-            DEAL ENDS IN: <span className="text-primary font-semibold">00:00:00</span>
+            Deal ends in: <span className="text-primary font-semibold">00:00:00</span>
           </p>
           
           {/* Trust badges */}
@@ -40,7 +35,7 @@ const FinalCTASection = () => {
             </div>
             <div className="flex items-center gap-2">
               <Star className="w-4 h-4 text-primary" />
-              <span>Trusted by Early Testers</span>
+              <span>Early Tester Approved</span>
             </div>
           </div>
         </div>

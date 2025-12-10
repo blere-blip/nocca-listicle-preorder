@@ -6,11 +6,11 @@ const HeroSection = () => {
       <div className="container">
         <div className="max-w-3xl mx-auto text-center">
           <p className="text-muted-foreground text-lg mb-6 animate-fade-in">
-            For years, hookah lovers kept burning tobacco and hoping the coals behave.
+            For years, hookah lovers kept burning tobacco and hoping the coals would behave.
           </p>
           
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 animate-fade-in opacity-0" style={{ animationDelay: "0.1s" }}>
-            Now there's{" "}
+            Welcome{" "}
             <span className="text-gradient-gold">NOCCA</span>
           </h1>
           
@@ -19,9 +19,10 @@ const HeroSection = () => {
           </p>
           
           <div className="space-y-2 text-lg text-muted-foreground mb-8 animate-fade-in opacity-0" style={{ animationDelay: "0.3s" }}>
-            <p>Premium shisha at home</p>
-            <p>Same tradition — no charcoal, zero hassle</p>
-            <p>No ash. No smell. No burnt flavor.</p>
+            <p>Precision electronic heat — charcoal is no longer needed</p>
+            <p>Full, consistent smoke output — equal or superior to coals</p>
+            <p>Your existing bowls and tobacco — unchanged</p>
+            <p>No ash. No smell. No burnt hits.</p>
           </div>
           
           <p className="text-foreground/80 italic mb-8 animate-fade-in opacity-0" style={{ animationDelay: "0.4s" }}>
