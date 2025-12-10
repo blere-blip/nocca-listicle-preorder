@@ -7,35 +7,38 @@ const FinalCTASection = () => {
       <div className="container">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-            Save €100 Before Pre-Orders Close on{" "}
-            <span className="text-gradient-gold">20.12</span>
+            The Final Opportunity to Secure{" "}
+            <span className="text-gradient-gold">Batch #1 Pricing</span>
           </h2>
           
+          <p className="text-lg text-muted-foreground mb-2">
+            Pre-orders close on 20.12.
+          </p>
           <p className="text-lg text-muted-foreground mb-8">
-            Batch #1 is nearly allocated. Once it closes, pricing returns to the standard launch price.
+            This €100 launch offer will not return.
           </p>
           
           <Button variant="gold" size="xl" className="animate-pulse-gold mb-6">
-            Get €100 Off — Secure Your Batch #1 Unit
+            Secure Your NOCCA Today
           </Button>
           
           <p className="text-sm text-muted-foreground mb-8">
-            Deal ends in: <span className="text-primary font-semibold">00:00:00</span>
+            Countdown: <span className="text-primary font-semibold">00:00:00</span>
           </p>
           
           {/* Trust badges */}
           <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground">
             <div className="flex items-center gap-2">
               <Truck className="w-4 h-4 text-primary" />
-              <span>Free Worldwide Shipping</span>
+              <span>Complimentary regional delivery</span>
             </div>
             <div className="flex items-center gap-2">
               <Shield className="w-4 h-4 text-primary" />
-              <span>24-Month Warranty</span>
+              <span>24-month warranty</span>
             </div>
             <div className="flex items-center gap-2">
               <Star className="w-4 h-4 text-primary" />
-              <span>Early Tester Approved</span>
+              <span>Hassle-free returns</span>
             </div>
           </div>
         </div>
