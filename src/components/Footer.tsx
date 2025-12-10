@@ -1,10 +1,11 @@
+import noccaLogo from "@/assets/nocca-logo.png";
+
 const Footer = () => {
   return (
     <footer className="py-8 border-t border-border">
       <div className="container">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-2xl font-bold text-gradient-gold">NOCCA</p>
-          
+          <img src={noccaLogo} alt="NOCCA" className="h-8" />
           <p className="text-sm text-muted-foreground text-center">
             © {new Date().getFullYear()} NOCCA. All rights reserved.
           </p>
