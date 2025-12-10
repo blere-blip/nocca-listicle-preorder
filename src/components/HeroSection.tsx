@@ -5,7 +5,7 @@ const HeroSection = () => {
     <section className="relative py-16 md:py-24 lg:py-32">
       <div className="container">
         <div className="max-w-3xl mx-auto text-center">
-          <p className="text-muted-foreground text-lg mb-6 animate-fade-in">
+          <p className="text-foreground text-lg mb-6 animate-fade-in">
             For years, hookah lovers kept burning tobacco and hoping the coals would behave.
           </p>
           
@@ -18,14 +18,14 @@ const HeroSection = () => {
             The smart, clean, modern way to keep the ritual alive.
           </p>
           
-          <div className="space-y-2 text-lg text-muted-foreground mb-8 animate-fade-in opacity-0" style={{ animationDelay: "0.3s" }}>
+          <div className="space-y-2 text-lg text-foreground mb-8 animate-fade-in opacity-0" style={{ animationDelay: "0.3s" }}>
             <p>Precision electronic heat — charcoal is no longer needed</p>
             <p>Full, consistent smoke output — equal or superior to coals</p>
             <p>Your existing bowls and tobacco — unchanged</p>
             <p>No ash. No smell. No burnt hits.</p>
           </div>
           
-          <p className="text-foreground/80 italic mb-8 animate-fade-in opacity-0" style={{ animationDelay: "0.4s" }}>
+          <p className="text-foreground italic mb-8 animate-fade-in opacity-0" style={{ animationDelay: "0.4s" }}>
             Once you try it, going back to coals feels… ancient.
           </p>
           
