@@ -1,7 +1,37 @@
 import { Button } from "@/components/ui/button";
 import { Truck, Shield, Star } from "lucide-react";
+import { useState, useEffect } from "react";
 
 const FinalCTASection = () => {
+  const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+
+  useEffect(() => {
+    const targetDate = new Date("2025-12-20T23:59:59").getTime();
+
+    const updateCountdown = () => {
+      const now = new Date().getTime();
+      const difference = targetDate - now;
+
+      if (difference > 0) {
+        setTimeLeft({
+          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+          hours: Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+          minutes: Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)),
+          seconds: Math.floor((difference % (1000 * 60)) / 1000),
+        });
+      } else {
+        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+      }
+    };
+
+    updateCountdown();
+    const interval = setInterval(updateCountdown, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const formatTime = (value: number) => value.toString().padStart(2, "0");
+
   return (
     <section className="py-20 md:py-28 bg-gradient-to-b from-charcoal-light to-background">
       <div className="container">
@@ -25,7 +55,10 @@ const FinalCTASection = () => {
           </Button>
           
           <p className="text-sm text-muted-foreground mb-8">
-            Countdown: <span className="text-primary font-semibold">00:00:00</span>
+            Countdown: <span className="text-primary font-semibold">
+              {timeLeft.days > 0 && `${formatTime(timeLeft.days)}d : `}
+              {formatTime(timeLeft.hours)}:{formatTime(timeLeft.minutes)}:{formatTime(timeLeft.seconds)}
+            </span>
           </p>
           
           {/* Trust badges */}
