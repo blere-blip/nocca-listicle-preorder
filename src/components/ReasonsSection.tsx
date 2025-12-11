@@ -85,6 +85,7 @@ const reasons = [
     ],
     additionalText: "A complete, refined starter set designed to elevate your session from the very first use.",
     image: reason8Image,
+    imagePosition: "bottom" as const,
   },
 ];
 
