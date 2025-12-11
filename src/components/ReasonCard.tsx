@@ -59,7 +59,7 @@ const ReasonCard = ({ number, title, description, bullets, additionalText, image
                 <img 
                   src={image} 
                   alt={title}
-                  className={`w-full h-full object-cover ${positionClass}`}
+                  className={`w-full h-full object-contain ${positionClass}`}
                 />
               ) : (
                 <span className="text-muted-foreground text-lg">Add image here</span>
