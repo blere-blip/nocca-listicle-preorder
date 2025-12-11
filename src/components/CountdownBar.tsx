@@ -32,34 +32,59 @@ const CountdownBar = () => {
   const formatTime = (value: number) => value.toString().padStart(2, "0");
 
   return (
-    <section className="py-8 border-y border-border">
+    <section className="py-16 md:py-20 border-y border-border/50">
       <div className="container">
         {/* Countdown */}
-        <div className="text-center mb-8">
-          <p className="text-sm text-muted-foreground uppercase tracking-widest mb-2">
-            Deal Ends In
+        <div className="text-center mb-12">
+          <p className="text-xs tracking-[0.3em] uppercase text-muted-foreground mb-4">
+            Offer Expires In
           </p>
-          <p className="text-3xl md:text-4xl font-bold text-primary tracking-wider">
-            {timeLeft.days > 0 && `${formatTime(timeLeft.days)}d : `}
-            {formatTime(timeLeft.hours)} : {formatTime(timeLeft.minutes)} : {formatTime(timeLeft.seconds)}
-          </p>
+          <div className="flex items-center justify-center gap-4 md:gap-6">
+            {timeLeft.days > 0 && (
+              <div className="text-center">
+                <p className="text-4xl md:text-5xl lg:text-6xl font-light text-foreground">{formatTime(timeLeft.days)}</p>
+                <p className="text-xs tracking-[0.2em] uppercase text-muted-foreground mt-2">Days</p>
+              </div>
+            )}
+            {timeLeft.days > 0 && <span className="text-2xl md:text-3xl text-primary/40 font-light">:</span>}
+            <div className="text-center">
+              <p className="text-4xl md:text-5xl lg:text-6xl font-light text-foreground">{formatTime(timeLeft.hours)}</p>
+              <p className="text-xs tracking-[0.2em] uppercase text-muted-foreground mt-2">Hours</p>
+            </div>
+            <span className="text-2xl md:text-3xl text-primary/40 font-light">:</span>
+            <div className="text-center">
+              <p className="text-4xl md:text-5xl lg:text-6xl font-light text-foreground">{formatTime(timeLeft.minutes)}</p>
+              <p className="text-xs tracking-[0.2em] uppercase text-muted-foreground mt-2">Minutes</p>
+            </div>
+            <span className="text-2xl md:text-3xl text-primary/40 font-light">:</span>
+            <div className="text-center">
+              <p className="text-4xl md:text-5xl lg:text-6xl font-light text-foreground">{formatTime(timeLeft.seconds)}</p>
+              <p className="text-xs tracking-[0.2em] uppercase text-muted-foreground mt-2">Seconds</p>
+            </div>
+          </div>
         </div>
         
         {/* Badges */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
-          <div className="flex items-center justify-center gap-3 text-center">
-            <Truck className="w-6 h-6 text-primary" />
-            <span className="text-sm md:text-base font-medium">Free Worldwide Shipping</span>
+        <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-full border border-border flex items-center justify-center">
+              <Truck className="w-4 h-4 text-primary" />
+            </div>
+            <span className="text-sm text-foreground/70">Free Shipping</span>
           </div>
           
-          <div className="flex items-center justify-center gap-3 text-center">
-            <Shield className="w-6 h-6 text-primary" />
-            <span className="text-sm md:text-base font-medium">24-Month Warranty</span>
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-full border border-border flex items-center justify-center">
+              <Shield className="w-4 h-4 text-primary" />
+            </div>
+            <span className="text-sm text-foreground/70">2-Year Warranty</span>
           </div>
           
-          <div className="flex items-center justify-center gap-3 text-center">
-            <RotateCcw className="w-6 h-6 text-primary" />
-            <span className="text-sm md:text-base font-medium">14-Day Returns</span>
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-full border border-border flex items-center justify-center">
+              <RotateCcw className="w-4 h-4 text-primary" />
+            </div>
+            <span className="text-sm text-foreground/70">14-Day Returns</span>
           </div>
         </div>
       </div>

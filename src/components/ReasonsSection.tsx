@@ -91,11 +91,14 @@ const reasons = [
 
 const ReasonsSection = () => {
   return (
-    <section className="py-16 md:py-20">
-      <div className="container mb-12">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center">
-          8 Reasons Hookah Lovers Are{" "}
-          <span className="text-gradient-gold">Switching to NOCCA</span>
+    <section className="py-20 md:py-28">
+      <div className="container mb-16">
+        <p className="text-xs tracking-[0.3em] uppercase text-primary/80 text-center mb-4">
+          Why NOCCA
+        </p>
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center leading-tight">
+          8 Reasons to{" "}
+          <span className="text-gradient-gold">Make the Switch</span>
         </h2>
       </div>
       
