@@ -5,9 +5,15 @@ interface ReasonCardProps {
   bullets: string[];
   additionalText?: string;
   image?: string;
+  imagePosition?: "center" | "bottom" | "top";
 }
 
-const ReasonCard = ({ number, title, description, bullets, additionalText, image }: ReasonCardProps) => {
+const ReasonCard = ({ number, title, description, bullets, additionalText, image, imagePosition = "center" }: ReasonCardProps) => {
+  const positionClass = {
+    center: "object-center",
+    bottom: "object-bottom",
+    top: "object-top",
+  }[imagePosition];
   return (
     <div className="py-16 md:py-20 border-b border-border last:border-b-0">
       <div className="container">
@@ -53,7 +59,7 @@ const ReasonCard = ({ number, title, description, bullets, additionalText, image
                 <img 
                   src={image} 
                   alt={title}
-                  className="w-full h-full object-contain p-4"
+                  className={`w-full h-full object-cover ${positionClass}`}
                 />
               ) : (
                 <span className="text-muted-foreground text-lg">Add image here</span>
