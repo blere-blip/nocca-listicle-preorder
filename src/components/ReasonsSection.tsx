@@ -1,4 +1,5 @@
 import ReasonCard from "./ReasonCard";
+import reason1Image from "@/assets/reason-1.avif";
 
 const reasons = [
   {
@@ -12,6 +13,7 @@ const reasons = [
       "Your entire ritual",
     ],
     additionalText: "Nothing changes except the heating — and that changes everything.\n\nNOCCA is a fully autonomous, battery-powered electronic heat management system that fits bowls up to 87 mm, runs for up to 2 hours, and delivers clean, stable heat from start to finish.\n\nNo capsules. No pods. No special tobacco.\nYour hookah, your bowl, your tobacco — just powered by intelligent heat.",
+    image: reason1Image,
   },
   {
     number: 2,
