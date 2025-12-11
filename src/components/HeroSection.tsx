@@ -1,34 +1,50 @@
 import { Button } from "@/components/ui/button";
+import { Check } from "lucide-react";
 
 const HeroSection = () => {
+  const benefits = [
+    "Precision electronic heat — charcoal is no longer needed",
+    "Full, consistent smoke output — equal or superior to coals",
+    "Your existing bowls and tobacco — unchanged",
+    "No ash. No smell. No burnt hits.",
+  ];
+
   return (
-    <section className="relative py-16 md:py-24 lg:py-32">
+    <section className="relative py-20 md:py-28 lg:py-36">
       <div className="container">
-        <div className="max-w-3xl mx-auto text-center">
-          <p className="text-foreground text-lg mb-6 animate-fade-in">
+        <div className="max-w-4xl mx-auto text-center">
+          {/* Pre-heading */}
+          <p className="text-sm md:text-base uppercase tracking-[0.2em] text-muted-foreground mb-8 animate-fade-in">
             For years, hookah lovers kept burning tobacco and hoping the coals would behave.
           </p>
           
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 animate-fade-in opacity-0" style={{ animationDelay: "0.1s" }}>
-            Welcome{" "}
-            <span className="text-gradient-gold">NOCCA</span>
+          {/* Main heading */}
+          <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-semibold leading-[1.1] mb-6 animate-fade-in opacity-0" style={{ animationDelay: "0.1s" }}>
+            Welcome to{" "}
+            <span className="text-gradient-gold block mt-2">NOCCA</span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-foreground font-medium mb-6 animate-fade-in opacity-0" style={{ animationDelay: "0.2s" }}>
+          {/* Tagline */}
+          <p className="text-xl md:text-2xl lg:text-3xl text-foreground/80 font-light mb-12 animate-fade-in opacity-0" style={{ animationDelay: "0.2s" }}>
             The smart, clean, modern way to keep the ritual alive.
           </p>
           
-          <div className="space-y-2 text-lg text-foreground mb-8 animate-fade-in opacity-0" style={{ animationDelay: "0.3s" }}>
-            <p>Precision electronic heat — charcoal is no longer needed</p>
-            <p>Full, consistent smoke output — equal or superior to coals</p>
-            <p>Your existing bowls and tobacco — unchanged</p>
-            <p>No ash. No smell. No burnt hits.</p>
+          {/* Benefits */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl mx-auto mb-10 animate-fade-in opacity-0" style={{ animationDelay: "0.3s" }}>
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-start gap-3 text-left">
+                <Check className="w-5 h-5 text-primary mt-0.5 shrink-0" />
+                <span className="text-foreground/90">{benefit}</span>
+              </div>
+            ))}
           </div>
           
-          <p className="text-foreground italic mb-8 animate-fade-in opacity-0" style={{ animationDelay: "0.4s" }}>
+          {/* Closing line */}
+          <p className="text-lg text-muted-foreground italic mb-10 animate-fade-in opacity-0" style={{ animationDelay: "0.4s" }}>
             Once you try it, going back to coals feels… ancient.
           </p>
           
+          {/* CTA */}
           <div className="animate-fade-in opacity-0" style={{ animationDelay: "0.5s" }}>
             <Button variant="gold" size="xl" className="animate-pulse-gold" asChild>
               <a href="https://www.nocca-ehms.com/product-page/nocca-electronic-heat-management-system-ehms" target="_blank" rel="noopener noreferrer">
