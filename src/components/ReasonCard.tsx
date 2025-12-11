@@ -4,9 +4,10 @@ interface ReasonCardProps {
   description: string;
   bullets: string[];
   additionalText?: string;
+  image?: string;
 }
 
-const ReasonCard = ({ number, title, description, bullets, additionalText }: ReasonCardProps) => {
+const ReasonCard = ({ number, title, description, bullets, additionalText, image }: ReasonCardProps) => {
   return (
     <div className="py-16 md:py-20 border-b border-border last:border-b-0">
       <div className="container">
@@ -45,10 +46,18 @@ const ReasonCard = ({ number, title, description, bullets, additionalText }: Rea
             )}
           </div>
           
-          {/* Image Placeholder */}
+          {/* Image */}
           <div className={`order-1 ${number % 2 === 0 ? "lg:order-2" : "lg:order-1"}`}>
-            <div className="aspect-[4/3] rounded-xl bg-charcoal-light border border-border flex items-center justify-center">
-              <span className="text-muted-foreground text-lg">Add image here</span>
+            <div className="aspect-[4/3] rounded-xl bg-charcoal-light border border-border overflow-hidden flex items-center justify-center">
+              {image ? (
+                <img 
+                  src={image} 
+                  alt={title}
+                  className="w-full h-full object-cover"
+                />
+              ) : (
+                <span className="text-muted-foreground text-lg">Add image here</span>
+              )}
             </div>
           </div>
         </div>
