@@ -30,8 +30,10 @@ const HeroSection = () => {
           </p>
           
           <div className="animate-fade-in opacity-0" style={{ animationDelay: "0.5s" }}>
-            <Button variant="gold" size="xl" className="animate-pulse-gold">
-              Get €100 Off Now
+            <Button variant="gold" size="xl" className="animate-pulse-gold" asChild>
+              <a href="https://www.nocca-ehms.com/product-page/nocca-electronic-heat-management-system-ehms" target="_blank" rel="noopener noreferrer">
+                Get €100 Off Now
+              </a>
             </Button>
           </div>
         </div>
