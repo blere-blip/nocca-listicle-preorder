@@ -18,8 +18,10 @@ const FinalCTASection = () => {
             This €100 launch offer will not return.
           </p>
           
-          <Button variant="gold" size="xl" className="animate-pulse-gold mb-6">
-            Secure Your NOCCA Today
+          <Button variant="gold" size="xl" className="animate-pulse-gold mb-6" asChild>
+            <a href="https://www.nocca-ehms.com/product-page/nocca-electronic-heat-management-system-ehms" target="_blank" rel="noopener noreferrer">
+              Secure Your NOCCA Today
+            </a>
           </Button>
           
           <p className="text-sm text-muted-foreground mb-8">
