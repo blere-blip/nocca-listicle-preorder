@@ -1,5 +1,6 @@
 import ReasonCard from "./ReasonCard";
 import reason1Image from "@/assets/reason-1.avif";
+import reason8Image from "@/assets/reason-8.png";
 
 const reasons = [
   {
@@ -83,6 +84,7 @@ const reasons = [
       "Precision tweezers for quick bowl prep",
     ],
     additionalText: "A complete, refined starter set designed to elevate your session from the very first use.",
+    image: reason8Image,
   },
 ];
 
