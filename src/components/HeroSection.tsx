@@ -1,41 +1,41 @@
 import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
+  const benefits = [
+    "Precision electronic heat — charcoal is no longer needed",
+    "Full, consistent smoke output — equal or superior to coals",
+    "Your existing bowls and tobacco — unchanged",
+    "No ash. No smell. No burnt hits.",
+  ];
+
   return (
     <section className="relative min-h-[90vh] flex items-center py-20 md:py-28">
       <div className="container">
         <div className="max-w-5xl mx-auto">
-          {/* Eyebrow */}
-          <p className="text-xs md:text-sm tracking-[0.3em] uppercase text-primary/80 mb-6 animate-fade-in">
-            The Future of Shisha
+          {/* Intro text */}
+          <p className="text-lg md:text-xl text-foreground/70 mb-8 animate-fade-in">
+            For years, hookah lovers kept burning tobacco and hoping the coals would behave.
           </p>
           
-          {/* Main heading - massive, confident */}
-          <h1 className="text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold tracking-tight leading-[0.9] mb-8 animate-fade-in opacity-0" style={{ animationDelay: "0.1s" }}>
-            <span className="text-gradient-gold">NOCCA</span>
+          {/* Main heading with tagline */}
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight mb-10 animate-fade-in opacity-0" style={{ animationDelay: "0.1s" }}>
+            Welcome <span className="text-gradient-gold">NOCCA</span>{" "}
+            <span className="font-light text-foreground/80">— the smart, clean, modern way to keep the ritual alive.</span>
           </h1>
           
-          {/* Tagline - elegant, understated */}
-          <p className="text-xl md:text-2xl lg:text-3xl text-foreground/70 font-light max-w-2xl mb-12 leading-relaxed animate-fade-in opacity-0" style={{ animationDelay: "0.2s" }}>
-            Precision electronic heat.<br className="hidden md:block" />
-            The ritual, perfected.
-          </p>
-          
-          {/* Key differentiators - minimal, scannable */}
-          <div className="flex flex-wrap gap-x-8 gap-y-3 text-sm md:text-base text-muted-foreground mb-12 animate-fade-in opacity-0" style={{ animationDelay: "0.3s" }}>
-            <span className="flex items-center gap-2">
-              <span className="w-1 h-1 rounded-full bg-primary" />
-              Zero charcoal
-            </span>
-            <span className="flex items-center gap-2">
-              <span className="w-1 h-1 rounded-full bg-primary" />
-              Perfect temperature
-            </span>
-            <span className="flex items-center gap-2">
-              <span className="w-1 h-1 rounded-full bg-primary" />
-              No ash, no smell
-            </span>
+          {/* Benefits with emoji */}
+          <div className="space-y-3 mb-10 animate-fade-in opacity-0" style={{ animationDelay: "0.2s" }}>
+            {benefits.map((benefit, index) => (
+              <p key={index} className="text-lg md:text-xl text-foreground/80">
+                👉 {benefit}
+              </p>
+            ))}
           </div>
+          
+          {/* Closing line */}
+          <p className="text-lg md:text-xl text-foreground/60 italic mb-12 animate-fade-in opacity-0" style={{ animationDelay: "0.3s" }}>
+            Once you try it, going back to coals feels… ancient.
+          </p>
           
           {/* CTA area */}
           <div className="flex flex-col sm:flex-row items-start gap-6 animate-fade-in opacity-0" style={{ animationDelay: "0.4s" }}>
