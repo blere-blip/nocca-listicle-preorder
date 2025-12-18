@@ -1,5 +1,6 @@
 import ReasonCard from "./ReasonCard";
 import reason1Image from "@/assets/reason-1.avif";
+import reason3Image from "@/assets/reason-3.png";
 import reason8Image from "@/assets/reason-8.png";
 
 const reasons = [
@@ -35,6 +36,7 @@ const reasons = [
     description: "Charcoal means handling burning material — a fire hazard by design. NOCCA removes that risk entirely with precision electronic heating enclosed in stainless steel.",
     bullets: [],
     additionalText: "A safer experience, engineered from the inside out.",
+    image: reason3Image,
   },
   {
     number: 4,
